@@ -8,9 +8,11 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.17.1",
+    "invariant": "^2.2.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "warning": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,18 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "### Tech-Stack",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tinspham209/insta-clone-react.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tinspham209/insta-clone-react/issues"
-  },
-  "homepage": "https://github.com/tinspham209/insta-clone-react#readme"
+  }
 }
