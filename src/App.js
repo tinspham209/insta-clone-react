@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Posts from "./components/Posts/Posts";
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
         />
       </div>
       <h1>Header</h1>
-
-      {/* {Posts} */}
-      {/* {Posts} */}
+      <Posts />
     </div>
   );
 }
