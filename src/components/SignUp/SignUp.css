@@ -1,0 +1,4 @@
+.form__signUp {
+  display: flex;
+  flex-direction: column;
+}
