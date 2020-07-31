@@ -190,7 +190,7 @@ function App() {
       ) : (
         <h3>Sorry you need to login to upload</h3>
       )}
-      <Posts />
+      <Posts user={user} />
     </div>
   );
 }

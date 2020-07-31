@@ -5,7 +5,8 @@ import InstagramEmbed from "react-instagram-embed";
 import Post from "./Post/Post";
 import "./Posts.css";
 
-const Posts = () => {
+const Posts = (props) => {
+  const { user } = props;
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -26,6 +27,8 @@ const Posts = () => {
     postsRender = posts.map(({ post, id }) => (
       <Post
         key={id}
+        postId={id}
+        user={user}
         username={post.username}
         caption={post.caption}
         imageUrl={post.imageUrl}
