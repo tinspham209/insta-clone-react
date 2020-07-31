@@ -11,7 +11,7 @@ const Posts = (props) => {
 
   useEffect(() => {
     db.collection("posts")
-      // .orderBy("timestamp", "desc")
+      .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         setPosts(
           snapshot.docs.map((doc) => ({
