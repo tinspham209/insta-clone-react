@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import Spinner from "../UI/Spinner/Spinner";
 import Post from "./Post/Post";
+import "./Posts.css";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -28,7 +29,7 @@ const Posts = () => {
       />
     ));
   }
-  return <React.Fragment>{postsRender}</React.Fragment>;
+  return <div className="container">{postsRender}</div>;
 };
 
 export default Posts;

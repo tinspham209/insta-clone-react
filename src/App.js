@@ -164,20 +164,24 @@ function App() {
       </Modal>
 
       <div className="app__header">
-        <img
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-          alt=""
-          className="app__headerImage"
-        />
-      </div>
-      {user ? (
-        <Button onClick={() => auth.signOut()}>Logout</Button>
-      ) : (
-        <div className="app__loginContainer">
-          <Button onClick={handleOpenSignIn}>Login</Button>
-          <Button onClick={handleModal}>Sign up</Button>
+        <div className="container">
+          <nav className="app__header-navigation">
+            <img
+              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+              alt=""
+              className="app__headerImage"
+            />
+            {user ? (
+              <Button onClick={() => auth.signOut()}>Logout</Button>
+            ) : (
+              <div className="app__loginContainer">
+                <Button onClick={handleOpenSignIn}>Login</Button>
+                <Button onClick={handleModal}>Sign up</Button>
+              </div>
+            )}
+          </nav>
         </div>
-      )}
+      </div>
 
       <h1>Header</h1>
       <Posts />
