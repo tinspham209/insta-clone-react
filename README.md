@@ -11,9 +11,13 @@
 
 https://insta-clone-react-3d58c.web.app/
 
+### Project console
+
+https://console.firebase.google.com/project insta-clone-react-3d58c/overview
+
 ### Function
 
-- Sign up, Login, Logout
+- Register, Login, Logout
 - Post new image & caption
 - View all posts
 - Comment in a post
