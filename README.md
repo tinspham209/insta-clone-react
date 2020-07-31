@@ -5,6 +5,7 @@
 - React Hooks
 - Firebase
 - Material-UI
+- react-instagram-embed
 
 ### Deploy
 
@@ -19,6 +20,7 @@ i have basic understanding about
 - How to handle authentication with Firebase
 - How to upload images to Firebase Storage and use them on your site!
 - Real-time database with Firebase’s Firestore
+- Embed Instagram Post
 
 ### Set up
 
