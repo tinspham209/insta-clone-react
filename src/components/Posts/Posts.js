@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import Spinner from "../UI/Spinner/Spinner";
+import InstagramEmbed from "react-instagram-embed";
 import Post from "./Post/Post";
 import "./Posts.css";
 
@@ -33,7 +34,23 @@ const Posts = () => {
   }
   return (
     <div className="container">
-      <div className="posts">{postsRender}</div>
+      <div className="posts">
+        <div className="posts-left">{postsRender}</div>
+        <div className="posts-right">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/B9BIkBYhMwb/"
+            // maxWidth="100%"
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
+        </div>
+      </div>
     </div>
   );
 };

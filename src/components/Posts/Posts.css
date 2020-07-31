@@ -1,3 +1,17 @@
 .posts {
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.posts-right {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .posts {
+    padding: 0;
+  }
+  .posts-right {
+    display: block;
+  }
 }
