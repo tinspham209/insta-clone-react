@@ -8,10 +8,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .posts {
-    padding: 0;
-  }
   .posts-right {
     display: block;
+    margin-left: 20px;
   }
 }
