@@ -1,5 +1,5 @@
 import { Button, Input } from "@material-ui/core";
-// import firebase from "firebase/app";
+import firebase from "firebase/app";
 import React, { useState } from "react";
 import { db, storage } from "../../firebase";
 import LinearProgressWithLabel from "../UI/Progress/Progress";
@@ -42,7 +42,7 @@ const ImageUpload = (props) => {
           .then((url) => {
             // post image & caption inside db
             db.collection("posts").add({
-              // timestamp: firebase.firestore.FieldValue.serverTimestamp,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
               caption: caption,
               imageUrl: url,
               username: username,
