@@ -13,7 +13,7 @@ https://insta-clone-react-3d58c.web.app/
 
 ### Project console
 
-https://console.firebase.google.com/project insta-clone-react-3d58c/overview
+https://console.firebase.google.com/project/insta-clone-react-3d58c/overview
 
 ### Function
 
