@@ -20,6 +20,10 @@
   object-fit: contain;
 }
 
+.app__headerImage {
+  object-fit: contain;
+}
+
 .app__signUp {
   display: flex;
   flex-direction: column;

@@ -31,7 +31,11 @@ const Posts = () => {
       />
     ));
   }
-  return <div className="container">{postsRender}</div>;
+  return (
+    <div className="container">
+      <div className="posts">{postsRender}</div>
+    </div>
+  );
 };
 
 export default Posts;

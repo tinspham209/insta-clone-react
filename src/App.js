@@ -94,12 +94,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* user? -> user co thi di vao displayName, ko thi tra ve undefined */}
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Sorry you need to login to upload</h3>
-      )}
       <Modal
         open={openSignIn}
         onClose={handleOpenSignIn}
@@ -190,7 +184,12 @@ function App() {
         </div>
       </div>
 
-      <h1>Header</h1>
+      {/* user? -> user co thi di vao displayName, ko thi tra ve undefined */}
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Sorry you need to login to upload</h3>
+      )}
       <Posts />
     </div>
   );
