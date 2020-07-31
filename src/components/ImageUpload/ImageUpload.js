@@ -3,6 +3,7 @@ import { Button, Input } from "@material-ui/core";
 import React, { useState } from "react";
 import { db, storage } from "../../firebase";
 import LinearProgressWithLabel from "../UI/Progress/Progress";
+import "./ImageUpload.css";
 
 const ImageUpload = (props) => {
   const { username } = props;
@@ -56,8 +57,7 @@ const ImageUpload = (props) => {
   };
 
   return (
-    <div>
-      <LinearProgressWithLabel value={progress} />
+    <div className="imageUpload">
       <Input
         type="text"
         placeholder="Enter a caption..."
@@ -65,6 +65,7 @@ const ImageUpload = (props) => {
         onChange={(event) => setCaption(event.target.value)}
       />
       <Input type="file" onChange={handleChange} />
+      <LinearProgressWithLabel value={progress} />
       <Button onClick={handleUpload}>Upload</Button>
     </div>
   );

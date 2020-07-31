@@ -1,0 +1,12 @@
+.imageUpload {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .imageUpload {
+    width: 30%;
+  }
+}
