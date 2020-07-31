@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Posts from "./components/Posts/Posts";
+import ImageUpload from "./components/ImageUpload/ImageUpload";
 import { auth } from "./firebase";
 
 function rand() {
@@ -93,6 +94,12 @@ function App() {
 
   return (
     <div className="app">
+      {/* user? -> user co thi di vao displayName, ko thi tra ve undefined */}
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Sorry you need to login to upload</h3>
+      )}
       <Modal
         open={openSignIn}
         onClose={handleOpenSignIn}
