@@ -3,6 +3,7 @@ import "./Post.css";
 import { Input, Avatar, Button } from "@material-ui/core";
 
 import { db } from "../../../firebase";
+import firebase from "firebase";
 
 const Post = (props) => {
   const { postId, user, username, caption, imageUrl } = props;
@@ -16,6 +17,7 @@ const Post = (props) => {
         .collection("posts")
         .doc(postId)
         .collection("comments")
+        .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
           setComments(snapshot.docs.map((doc) => doc.data()));
         });
@@ -30,6 +32,7 @@ const Post = (props) => {
     db.collection("posts").doc(postId).collection("comments").add({
       text: comment,
       username: user.displayName,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setComment("");
   };
@@ -57,7 +60,7 @@ const Post = (props) => {
 
       <div className="post__comments">
         {comments.map((comment) => (
-          <p>
+          <p key={comment.timestamp}>
             <strong>{comment.username}</strong> {comment.text}
           </p>
         ))}
